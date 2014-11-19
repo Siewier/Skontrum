@@ -21,5 +21,10 @@ namespace Skontrum
         {
             this.Close();
         }
+
+        private void FormPodsumowanie_Load(object sender, EventArgs e)
+        {
+            label8.Text = KatalogKsiazek.PoliczKsiazki().ToString();
+        }
     }
 }

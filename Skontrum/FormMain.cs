@@ -52,5 +52,10 @@ namespace Skontrum
             FormTabela formT = new FormTabela();
             formT.Show();
         }
+
+        private void btnZapisz_Click(object sender, EventArgs e)
+        {
+            KatalogKsiazek.ZapiszXML(Zmienne.plik);
+        }
     }
 }

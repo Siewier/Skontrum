@@ -21,5 +21,18 @@ namespace Skontrum
         {
             this.Close();
         }
+
+        private void btnZapiszNoweSkontrum_Click(object sender, EventArgs e)
+        {
+            Zmienne.plik += this.tbNoweSkontrum.Text.ToString();
+            Zmienne.plik += ".xml";
+            bool rezultat = KatalogKsiazek.NoweSkontrum(Zmienne.plik);
+            if (rezultat == false)
+            {
+                //wyswietl okienko z bledem
+                MessageBox.Show("Nie udało się utworzyć pliku! Ścieżka: " + Zmienne.plik);
+            }
+            this.Close();
+        }
     }
 }

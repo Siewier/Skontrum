@@ -15,6 +15,10 @@ namespace Skontrum
         public FormTabela()
         {
             InitializeComponent();
+
+            this.dataGridView1.Visible = true;
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = Zmienne.tabela;
         }
     }
 }

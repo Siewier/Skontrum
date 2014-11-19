@@ -58,6 +58,7 @@
             this.btnZapiszNoweSkontrum.TabIndex = 2;
             this.btnZapiszNoweSkontrum.Text = "Zapisz";
             this.btnZapiszNoweSkontrum.UseVisualStyleBackColor = true;
+            this.btnZapiszNoweSkontrum.Click += new System.EventHandler(this.btnZapiszNoweSkontrum_Click);
             // 
             // btnAnulujNoweSkontrum
             // 

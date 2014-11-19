@@ -101,8 +101,10 @@
     <Compile Include="FormUbytek.Designer.cs">
       <DependentUpon>FormUbytek.cs</DependentUpon>
     </Compile>
+    <Compile Include="KatalogKsiazek.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Zmienne.cs" />
     <EmbeddedResource Include="FormKsiazkaWypozyczona.resx">
       <DependentUpon>FormKsiazkaWypozyczona.cs</DependentUpon>
     </EmbeddedResource>

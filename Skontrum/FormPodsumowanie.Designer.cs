@@ -217,6 +217,7 @@
             this.Name = "FormPodsumowanie";
             this.ShowInTaskbar = false;
             this.Text = "Podsumowanie";
+            this.Load += new System.EventHandler(this.FormPodsumowanie_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

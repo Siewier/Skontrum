@@ -190,6 +190,7 @@
             this.btnZapisz.TabIndex = 0;
             this.btnZapisz.Text = "Zapisz";
             this.btnZapisz.UseVisualStyleBackColor = true;
+            this.btnZapisz.Click += new System.EventHandler(this.btnZapisz_Click);
             // 
             // openFileDialog1
             // 
