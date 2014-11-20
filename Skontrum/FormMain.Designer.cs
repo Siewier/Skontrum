@@ -190,6 +190,7 @@
             this.btnDrukuj.TabIndex = 1;
             this.btnDrukuj.Text = "Drukuj";
             this.btnDrukuj.UseVisualStyleBackColor = true;
+            this.btnDrukuj.Click += new System.EventHandler(this.btnDrukuj_Click);
             // 
             // btnZapisz
             // 

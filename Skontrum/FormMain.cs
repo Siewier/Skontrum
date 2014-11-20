@@ -122,5 +122,10 @@ namespace Skontrum
                 //}
             }
         }
+
+        private void btnDrukuj_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Kiedyś będzie działało ;)");
+        }
     }
 }

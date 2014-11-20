@@ -14,7 +14,6 @@ namespace Skontrum
         public static bool NoweSkontrum(string nazwa)
         {
             bool rezultat = true;
-
             //tworzenie pliku i uzupelnianie tabeli
             Zmienne.tabela.TableName = "Ksiazki";
             Zmienne.tabela.Columns.Add("nrInw", typeof(int));
@@ -32,25 +31,20 @@ namespace Skontrum
                 {
                     rezultat = false;
                 }
-
             }
-
             return rezultat;
         }
 
         public static bool PobierzDane()
         {
             bool rezultat = false;
-
             //pobieranie danych
-
             return rezultat;
         }
 
         public static bool DodajKsiazke(int numerInw, string stan, string miejsce)
         {
             bool rezultat = false;
-
             //doddawanie ksiazki
             Zmienne.tabela.Rows.Add(numerInw, stan, miejsce);
             Zmienne.tabela.AcceptChanges();
@@ -61,17 +55,14 @@ namespace Skontrum
         public static int PoliczKsiazki()
         {
             int wynik = 0;
-
             //liczenie ksiazek
             wynik = Zmienne.tabela.Rows.Count;
-
             return wynik;
         }
 
         public static bool ZapiszXML(string nazwa)
         {
             bool rezultat = true;
-
             //zapisywanie danych
             Zmienne.tabela.WriteXml(Zmienne.plik, XmlWriteMode.WriteSchema);
             Zmienne.zapisane = true;
@@ -80,10 +71,8 @@ namespace Skontrum
         public static bool WczytajXML(string nazwa)
         {
             bool result = true;
-
             //wczytywanie danych
             Zmienne.tabela.ReadXml(Zmienne.plik);
-
             return result;
         }
 
@@ -99,6 +88,7 @@ namespace Skontrum
             dv.Sort = "nrInw ASC";
             //DataTable sortedDT = dv.ToTable();
             Zmienne.tabela = dv.ToTable();
+            Zmienne.zapisane = false;
         }
     }
 }
