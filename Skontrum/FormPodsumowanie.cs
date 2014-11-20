@@ -24,7 +24,22 @@ namespace Skontrum
 
         private void FormPodsumowanie_Load(object sender, EventArgs e)
         {
+            KatalogKsiazek.PosortujKsiazki();
+            //label8
             label8.Text = KatalogKsiazek.PoliczKsiazki().ToString();
+            //label9
+            //label10
+            //label11
+            //label12
+            label12.Text = Zmienne.tabela.Rows[0][0].ToString();
+            //label13
+            //label14
+
+        }
+
+        private void btnWyswietlBrakujace_Click(object sender, EventArgs e)
+        {
+            //wyswietlanie brakujacych wpisow
         }
     }
 }

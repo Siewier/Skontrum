@@ -220,6 +220,7 @@
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.Text = "Skontrum";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.gbStart.ResumeLayout(false);
             this.gbDodaj.ResumeLayout(false);
             this.gbStatus.ResumeLayout(false);

@@ -106,5 +106,21 @@ namespace Skontrum
                 MessageBox.Show("Skontrum załadowane!");
             }
         }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Zmienne.zapisane == false)
+            {
+                DialogResult dialogResult = MessageBox.Show("Skontrum nie zostało zapisane po wprowadzeniu ostatnich zmian. Zapisać je przed wyjściem?", "Czy zapisać skontrum?", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    KatalogKsiazek.ZapiszXML(Zmienne.plik);
+                }
+                //else if (dialogResult == DialogResult.No)
+                //{
+                //    //do something else
+                //}
+            }
+        }
     }
 }

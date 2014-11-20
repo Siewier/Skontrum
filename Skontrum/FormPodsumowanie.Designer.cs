@@ -180,6 +180,7 @@
             this.btnWyswietlBrakujace.TabIndex = 14;
             this.btnWyswietlBrakujace.Text = "Wyświetl brakujące";
             this.btnWyswietlBrakujace.UseVisualStyleBackColor = true;
+            this.btnWyswietlBrakujace.Click += new System.EventHandler(this.btnWyswietlBrakujace_Click);
             // 
             // btnZamknij
             // 

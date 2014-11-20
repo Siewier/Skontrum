@@ -12,5 +12,8 @@ namespace Skontrum
     {
         public static DataTable tabela = new DataTable();
         public static string plik = Directory.GetCurrentDirectory() + "\\";
+        public static int minNumInw = 0;
+        public static int maxNumInw = 0;
+        public static bool zapisane = false;
     }
 }

@@ -54,7 +54,7 @@ namespace Skontrum
             //doddawanie ksiazki
             Zmienne.tabela.Rows.Add(numerInw, stan, miejsce);
             Zmienne.tabela.AcceptChanges();
-
+            Zmienne.zapisane = false;
             return rezultat;
         }
 
@@ -74,7 +74,7 @@ namespace Skontrum
 
             //zapisywanie danych
             Zmienne.tabela.WriteXml(Zmienne.plik, XmlWriteMode.WriteSchema);
-
+            Zmienne.zapisane = true;
             return rezultat;
         }
         public static bool WczytajXML(string nazwa)
@@ -92,6 +92,13 @@ namespace Skontrum
             XLWorkbook wb = new XLWorkbook();
             wb.Worksheets.Add(Zmienne.tabela, "Skontrum");
             wb.SaveAs(Directory.GetCurrentDirectory() + "\\Skontrum.xlsx");
+        }
+        public static void PosortujKsiazki()
+        {
+            DataView dv = Zmienne.tabela.DefaultView;
+            dv.Sort = "nrInw ASC";
+            //DataTable sortedDT = dv.ToTable();
+            Zmienne.tabela = dv.ToTable();
         }
     }
 }
