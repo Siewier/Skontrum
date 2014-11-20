@@ -21,5 +21,17 @@ namespace Skontrum
         {
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            KatalogKsiazek.DodajKsiazke(int.Parse(textBox1.Text), "ubytek", textBox2.Text);
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            KatalogKsiazek.DodajKsiazke(int.Parse(textBox1.Text), "ubytek", textBox2.Text);
+            textBox1.Text = "";
+        }
     }
 }

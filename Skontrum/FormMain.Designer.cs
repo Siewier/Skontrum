@@ -93,6 +93,7 @@
             // 
             // btnUbytki
             // 
+            this.btnUbytki.Enabled = false;
             this.btnUbytki.Location = new System.Drawing.Point(76, 49);
             this.btnUbytki.Name = "btnUbytki";
             this.btnUbytki.Size = new System.Drawing.Size(109, 23);
@@ -103,6 +104,7 @@
             // 
             // btnWypozyczone
             // 
+            this.btnWypozyczone.Enabled = false;
             this.btnWypozyczone.Location = new System.Drawing.Point(144, 20);
             this.btnWypozyczone.Name = "btnWypozyczone";
             this.btnWypozyczone.Size = new System.Drawing.Size(110, 23);
@@ -113,6 +115,7 @@
             // 
             // btnZPolki
             // 
+            this.btnZPolki.Enabled = false;
             this.btnZPolki.Location = new System.Drawing.Point(7, 20);
             this.btnZPolki.Name = "btnZPolki";
             this.btnZPolki.Size = new System.Drawing.Size(109, 23);
@@ -134,6 +137,7 @@
             // 
             // btnTabela
             // 
+            this.btnTabela.Enabled = false;
             this.btnTabela.Location = new System.Drawing.Point(144, 20);
             this.btnTabela.Name = "btnTabela";
             this.btnTabela.Size = new System.Drawing.Size(110, 23);
@@ -144,6 +148,7 @@
             // 
             // btnPodsumowanie
             // 
+            this.btnPodsumowanie.Enabled = false;
             this.btnPodsumowanie.Location = new System.Drawing.Point(6, 20);
             this.btnPodsumowanie.Name = "btnPodsumowanie";
             this.btnPodsumowanie.Size = new System.Drawing.Size(110, 23);
@@ -166,15 +171,18 @@
             // 
             // btnEksportuj
             // 
+            this.btnEksportuj.Enabled = false;
             this.btnEksportuj.Location = new System.Drawing.Point(6, 50);
             this.btnEksportuj.Name = "btnEksportuj";
             this.btnEksportuj.Size = new System.Drawing.Size(248, 23);
             this.btnEksportuj.TabIndex = 2;
             this.btnEksportuj.Text = "Eksportuj do MS Excel";
             this.btnEksportuj.UseVisualStyleBackColor = true;
+            this.btnEksportuj.Click += new System.EventHandler(this.btnEksportuj_Click);
             // 
             // btnDrukuj
             // 
+            this.btnDrukuj.Enabled = false;
             this.btnDrukuj.Location = new System.Drawing.Point(144, 20);
             this.btnDrukuj.Name = "btnDrukuj";
             this.btnDrukuj.Size = new System.Drawing.Size(110, 23);
@@ -184,6 +192,7 @@
             // 
             // btnZapisz
             // 
+            this.btnZapisz.Enabled = false;
             this.btnZapisz.Location = new System.Drawing.Point(6, 20);
             this.btnZapisz.Name = "btnZapisz";
             this.btnZapisz.Size = new System.Drawing.Size(110, 23);

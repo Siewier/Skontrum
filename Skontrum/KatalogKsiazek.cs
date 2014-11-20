@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Data;
+using ClosedXML.Excel;
 
 namespace Skontrum
 {
@@ -75,6 +76,13 @@ namespace Skontrum
             Zmienne.tabela.WriteXml(Zmienne.plik, XmlWriteMode.WriteSchema);
 
             return rezultat;
+        }
+
+        public static void ZapiszDoExcela()
+        {
+            XLWorkbook wb = new XLWorkbook();
+            wb.Worksheets.Add(Zmienne.tabela, "Skontrum");
+            wb.SaveAs(Directory.GetCurrentDirectory() + "\\Skontrum.xlsx");
         }
     }
 }

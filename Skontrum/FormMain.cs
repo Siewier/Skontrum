@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,42 +21,69 @@ namespace Skontrum
         private void btnNoweSkontrum_Click(object sender, EventArgs e)
         {
             FormNoweSkontrum formNS = new FormNoweSkontrum();
-            formNS.Show();
+            
+            formNS.ShowDialog();
+            
+
+            SkontrumZaladowane();
+        }
+
+        private void SkontrumZaladowane()
+        {
+            btnWczytajSkontrum.Enabled = false;
+            btnNoweSkontrum.Enabled = false;
+            btnZPolki.Enabled = true;
+            btnWypozyczone.Enabled = true;
+            btnUbytki.Enabled = true;
+            btnPodsumowanie.Enabled = true;
+            btnTabela.Enabled = true;
+            btnZapisz.Enabled = true;
+            btnDrukuj.Enabled = true;
+            btnEksportuj.Enabled = true;
         }
 
         private void btnZPolki_Click(object sender, EventArgs e)
         {
             FormKsiazkaZPolki formKZP = new FormKsiazkaZPolki();
-            formKZP.Show();
+            formKZP.ShowDialog();
+            
         }
 
         private void btnWypozyczone_Click(object sender, EventArgs e)
         {
             FormKsiazkaWypozyczona formKW = new FormKsiazkaWypozyczona();
-            formKW.Show();
+            formKW.ShowDialog();
+
+            SkontrumZaladowane();
         }
 
         private void btnUbytki_Click(object sender, EventArgs e)
         {
             FormUbytek formU = new FormUbytek();
-            formU.Show();
+            formU.ShowDialog();
         }
 
         private void btnPodsumowanie_Click(object sender, EventArgs e)
         {
             FormPodsumowanie formPod = new FormPodsumowanie();
-            formPod.Show();
+            formPod.ShowDialog();
         }
 
         private void btnTabela_Click(object sender, EventArgs e)
         {
             FormTabela formT = new FormTabela();
-            formT.Show();
+            formT.ShowDialog();
         }
 
         private void btnZapisz_Click(object sender, EventArgs e)
         {
             KatalogKsiazek.ZapiszXML(Zmienne.plik);
+            MessageBox.Show("Zapisano w: " + Zmienne.plik);
+        }
+
+        private void btnEksportuj_Click(object sender, EventArgs e)
+        {
+            KatalogKsiazek.ZapiszDoExcela();
         }
     }
 }
