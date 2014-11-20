@@ -85,5 +85,26 @@ namespace Skontrum
         {
             KatalogKsiazek.ZapiszDoExcela();
         }
+
+        private void btnWczytajSkontrum_Click(object sender, EventArgs e)
+        {
+            bool efekt = false;
+            DialogResult result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK) // Test result.
+            {
+                //string file = openFileDialog1.FileName;
+                Zmienne.plik = openFileDialog1.FileName;
+                efekt = KatalogKsiazek.WczytajXML(Zmienne.plik);
+            }
+            else
+            {
+                MessageBox.Show(result.ToString());
+            }
+            if (efekt == true)
+            {
+                SkontrumZaladowane();
+                MessageBox.Show("Skontrum załadowane!");
+            }
+        }
     }
 }

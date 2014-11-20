@@ -67,6 +67,7 @@
             this.btnWczytajSkontrum.TabIndex = 1;
             this.btnWczytajSkontrum.Text = "Wczytaj skontrum";
             this.btnWczytajSkontrum.UseVisualStyleBackColor = true;
+            this.btnWczytajSkontrum.Click += new System.EventHandler(this.btnWczytajSkontrum_Click);
             // 
             // gbStart
             // 
@@ -203,7 +204,8 @@
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "\"Pliki XML|*.xml|Wszystkie|*.*\"";
+            this.openFileDialog1.InitialDirectory = "Directory.GetCurrentDirectory()";
             // 
             // FormMain
             // 

@@ -70,12 +70,21 @@ namespace Skontrum
 
         public static bool ZapiszXML(string nazwa)
         {
-            bool rezultat = false;
+            bool rezultat = true;
 
             //zapisywanie danych
             Zmienne.tabela.WriteXml(Zmienne.plik, XmlWriteMode.WriteSchema);
 
             return rezultat;
+        }
+        public static bool WczytajXML(string nazwa)
+        {
+            bool result = true;
+
+            //wczytywanie danych
+            Zmienne.tabela.ReadXml(Zmienne.plik);
+
+            return result;
         }
 
         public static void ZapiszDoExcela()
