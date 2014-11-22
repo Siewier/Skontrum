@@ -32,6 +32,17 @@ namespace Skontrum
         {
             KatalogKsiazek.DodajKsiazke(int.Parse(textBox1.Text), "ubytek", textBox2.Text);
             textBox1.Text = "";
+            textBox2.Text = "";
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && textBox2.Text != "")
+            {
+                KatalogKsiazek.DodajKsiazke(int.Parse(textBox1.Text), "ubytek", textBox2.Text);
+                textBox1.Text = "";
+                textBox2.Text = "";
+            }
         }
     }
 }

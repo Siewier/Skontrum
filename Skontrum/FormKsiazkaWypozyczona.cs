@@ -30,8 +30,18 @@ namespace Skontrum
 
         private void button3_Click(object sender, EventArgs e)
         {
-            KatalogKsiazek.DodajKsiazke(int.Parse(textBox1.Text), "polka", textBox2.Text);
+            KatalogKsiazek.DodajKsiazke(int.Parse(textBox1.Text), "wypozyczona", textBox2.Text);
             textBox1.Text = "";
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && textBox2.Text != "")
+            {
+                KatalogKsiazek.DodajKsiazke(int.Parse(textBox1.Text), "wypozyczona", textBox2.Text);
+                textBox1.Text = "";
+                textBox2.Text = "";
+            }
         }
     }
 }

@@ -31,10 +31,17 @@ namespace Skontrum
             //label9
             //label10
             //label11
-            //label12
-            label12.Text = Zmienne.tabela.Rows[0][0].ToString();
-            //label13
-            label13.Text = Zmienne.tabela.Rows[iloscKsiazek - 1][0].ToString();
+            //label12 i 13
+            if (iloscKsiazek > 0) 
+            {
+                label12.Text = Zmienne.tabela.Rows[0][0].ToString();
+                label13.Text = Zmienne.tabela.Rows[iloscKsiazek - 1][0].ToString();
+            }
+            else
+            {
+                label12.Text = "0";
+                label13.Text = "0";
+            }
             //label14
 
         }
