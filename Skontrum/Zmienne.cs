@@ -15,5 +15,6 @@ namespace Skontrum
         public static int minNumInw = 0;
         public static int maxNumInw = 0;
         public static bool zapisane = false;
+        public static bool wczytane = false;
     }
 }

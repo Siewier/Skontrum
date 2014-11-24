@@ -32,6 +32,7 @@ namespace Skontrum
                     rezultat = false;
                 }
             }
+            Zmienne.wczytane = true;
             return rezultat;
         }
 
@@ -73,6 +74,7 @@ namespace Skontrum
             bool result = true;
             //wczytywanie danych
             Zmienne.tabela.ReadXml(Zmienne.plik);
+            Zmienne.wczytane = true;
             return result;
         }
 

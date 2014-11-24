@@ -109,7 +109,7 @@ namespace Skontrum
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Zmienne.zapisane == false)
+            if (Zmienne.zapisane == false && Zmienne.wczytane == true)
             {
                 DialogResult dialogResult = MessageBox.Show("Skontrum nie zostało zapisane po wprowadzeniu ostatnich zmian. Zapisać je przed wyjściem?", "Czy zapisać skontrum?", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -126,6 +126,12 @@ namespace Skontrum
         private void btnDrukuj_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Kiedyś będzie działało ;)");
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            Info info = new Info();
+            info.ShowDialog();
         }
     }
 }

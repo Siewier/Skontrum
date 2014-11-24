@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.btnNoweSkontrum = new System.Windows.Forms.Button();
             this.btnWczytajSkontrum = new System.Windows.Forms.Button();
             this.gbStart = new System.Windows.Forms.GroupBox();
@@ -43,6 +44,7 @@
             this.btnDrukuj = new System.Windows.Forms.Button();
             this.btnZapisz = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.gbStart.SuspendLayout();
             this.gbDodaj.SuspendLayout();
             this.gbStatus.SuspendLayout();
@@ -208,16 +210,28 @@
             this.openFileDialog1.Filter = "\"Pliki XML|*.xml|Wszystkie|*.*\"";
             this.openFileDialog1.InitialDirectory = "Directory.GetCurrentDirectory()";
             // 
+            // btnInfo
+            // 
+            this.btnInfo.Location = new System.Drawing.Point(19, 315);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(247, 23);
+            this.btnInfo.TabIndex = 6;
+            this.btnInfo.Text = "O programie";
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 316);
+            this.ClientSize = new System.Drawing.Size(284, 346);
+            this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbStatus);
             this.Controls.Add(this.gbDodaj);
             this.Controls.Add(this.gbStart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.Text = "Skontrum";
@@ -247,6 +261,7 @@
         private System.Windows.Forms.Button btnDrukuj;
         private System.Windows.Forms.Button btnZapisz;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnInfo;
     }
 }
 
