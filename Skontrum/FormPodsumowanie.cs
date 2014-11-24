@@ -26,11 +26,17 @@ namespace Skontrum
         {
             KatalogKsiazek.PosortujKsiazki();
             int iloscKsiazek = KatalogKsiazek.PoliczKsiazki();
+            int iloscNaPolkach = KatalogKsiazek.PoliczNaPolkach();
+            int iloscWypozyczonych = KatalogKsiazek.PoliczWypozyczone();
+            int iloscUbytkow = KatalogKsiazek.PoliczUbytki();
             //label8
             label8.Text = iloscKsiazek.ToString();
             //label9
+            label9.Text = iloscNaPolkach.ToString();
             //label10
+            label10.Text = iloscWypozyczonych.ToString();
             //label11
+            label11.Text = iloscUbytkow.ToString();
             //label12 i 13
             if (iloscKsiazek > 0) 
             {
@@ -43,13 +49,18 @@ namespace Skontrum
                 label13.Text = "0";
             }
             //label14
+            int iloscBrakujacych =  int.Parse(Zmienne.tabela.Rows[iloscKsiazek - 1][0].ToString()) - iloscKsiazek;
+            label14.Text = iloscBrakujacych.ToString();
 
         }
 
         private void btnWyswietlBrakujace_Click(object sender, EventArgs e)
         {
             //wyswietlanie brakujacych wpisow
-            MessageBox.Show("Czeka na zaimplemontowanie...");
+            //MessageBox.Show("Czeka na zaimplemontowanie...");
+            FormBrakujace formB = new FormBrakujace();
+            formB.ShowDialog();
+            this.Close();
         }
     }
 }

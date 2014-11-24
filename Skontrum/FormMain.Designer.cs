@@ -236,6 +236,7 @@
             this.Name = "FormMain";
             this.Text = "Skontrum";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.gbStart.ResumeLayout(false);
             this.gbDodaj.ResumeLayout(false);
             this.gbStatus.ResumeLayout(false);

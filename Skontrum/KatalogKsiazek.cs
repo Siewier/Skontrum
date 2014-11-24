@@ -20,6 +20,7 @@ namespace Skontrum
             Zmienne.tabela.Columns.Add("stan", typeof(string));
             Zmienne.tabela.Columns.Add("miejsce", typeof(string));
             Zmienne.tabela.AcceptChanges();
+
             try
             {
                 //File.Create(nazwa);
@@ -42,7 +43,6 @@ namespace Skontrum
             //pobieranie danych
             return rezultat;
         }
-
         public static bool DodajKsiazke(int numerInw, string stan, string miejsce)
         {
             bool rezultat = false;
@@ -52,7 +52,6 @@ namespace Skontrum
             Zmienne.zapisane = false;
             return rezultat;
         }
-
         public static int PoliczKsiazki()
         {
             int wynik = 0;
@@ -60,7 +59,27 @@ namespace Skontrum
             wynik = Zmienne.tabela.Rows.Count;
             return wynik;
         }
-
+        public static int PoliczNaPolkach()
+        {
+            int wynik = 0;
+            //liczenie ksiazek na polkach
+            wynik = Zmienne.tabela.Select("stan = 'polka'").Length;
+            return wynik;
+        }
+        public static int PoliczWypozyczone()
+        {
+            int wynik = 0;
+            //liczenie ksiazek wypozyczone
+            wynik = Zmienne.tabela.Select("stan = 'wypozyczona'").Length;
+            return wynik;
+        }
+        public static int PoliczUbytki()
+        {
+            int wynik = 0;
+            //liczenie ubytkow
+            wynik = Zmienne.tabela.Select("stan = 'ubytek'").Length;
+            return wynik;
+        }
         public static bool ZapiszXML(string nazwa)
         {
             bool rezultat = true;
@@ -77,7 +96,6 @@ namespace Skontrum
             Zmienne.wczytane = true;
             return result;
         }
-
         public static void ZapiszDoExcela()
         {
             XLWorkbook wb = new XLWorkbook();
@@ -90,7 +108,52 @@ namespace Skontrum
             dv.Sort = "nrInw ASC";
             //DataTable sortedDT = dv.ToTable();
             Zmienne.tabela = dv.ToTable();
+            Zmienne.tabela.AcceptChanges();
             Zmienne.zapisane = false;
+        }
+        public static void SzukajBrakujacych()
+        {
+            PosortujKsiazki();
+            Zmienne.tabelaBraki.Clear();
+            int poprzedniaKsiazka = int.Parse(Zmienne.tabela.Rows[0][0].ToString());
+            foreach (DataRow row in Zmienne.tabela.Rows)
+            {
+                int numerInw = int.Parse(row["nrInw"].ToString());
+                if (numerInw > poprzedniaKsiazka)
+                {
+                    for (int i = poprzedniaKsiazka + 1; i < numerInw; i++)
+                    {
+                        Zmienne.tabelaBraki.Rows.Add(i, "brak danych", "brak danych");
+                        Zmienne.tabela.AcceptChanges();
+                    }
+                    poprzedniaKsiazka = numerInw;
+
+                }
+            }
+        }
+        public static void OznaczJakoBrakujace()
+        {
+            PosortujKsiazki();
+            List<int> lista = new List<int>();
+            int poprzedniaKsiazka = int.Parse(Zmienne.tabela.Rows[0][0].ToString());
+            foreach (DataRow row in Zmienne.tabela.Rows)
+            {
+                int numerInw = int.Parse(row["nrInw"].ToString());
+                if (numerInw > poprzedniaKsiazka)
+                {
+                    for (int i = poprzedniaKsiazka + 1; i < numerInw; i++)
+                    {
+                        //Zmienne.tabela.Rows.Add(i, "brak", "brak danych");
+                        lista.Add(i);
+                    }
+                    poprzedniaKsiazka = numerInw;
+                }
+            }
+            foreach (int numer in lista)
+            {
+                Zmienne.tabela.Rows.Add(numer, "brak", "brak danych");
+            }
+            PosortujKsiazki();
         }
     }
 }

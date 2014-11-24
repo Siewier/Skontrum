@@ -133,5 +133,14 @@ namespace Skontrum
             Info info = new Info();
             info.ShowDialog();
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            Zmienne.tabelaBraki.TableName = "Ksiazki";
+            Zmienne.tabelaBraki.Columns.Add("nrInw", typeof(int));
+            Zmienne.tabelaBraki.Columns.Add("stan", typeof(string));
+            Zmienne.tabelaBraki.Columns.Add("miejsce", typeof(string));
+            Zmienne.tabelaBraki.AcceptChanges();
+        }
     }
 }

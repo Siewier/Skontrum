@@ -11,6 +11,7 @@ namespace Skontrum
     public class Zmienne
     {
         public static DataTable tabela = new DataTable();
+        public static DataTable tabelaBraki = new DataTable();
         public static string plik = Directory.GetCurrentDirectory() + "\\";
         public static int minNumInw = 0;
         public static int maxNumInw = 0;
