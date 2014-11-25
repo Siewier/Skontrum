@@ -32,6 +32,10 @@ namespace Skontrum
             LinkLabel.Link link = new LinkLabel.Link();
             link.LinkData = "https://github.com/Siewier/Skontrum";
             linkLabel1.Links.Add(link);
+
+            LinkLabel.Link link2 = new LinkLabel.Link();
+            link2.LinkData = "http://przemeksiewierski.eu";
+            linkLabel2.Links.Add(link2);
         }
     }
 }
