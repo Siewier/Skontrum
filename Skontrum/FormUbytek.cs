@@ -24,13 +24,21 @@ namespace Skontrum
 
         private void button2_Click(object sender, EventArgs e)
         {
-            KatalogKsiazek.DodajKsiazke(int.Parse(textBox1.Text), "ubytek", textBox2.Text);
+            bool rezultat = KatalogKsiazek.DodajKsiazke(int.Parse(textBox1.Text), "ubytek", textBox2.Text);
+            if (rezultat == false)
+            {
+                MessageBox.Show("Już istnieje książka z tym numerem inwentażowym!");
+            }
             this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            KatalogKsiazek.DodajKsiazke(int.Parse(textBox1.Text), "ubytek", textBox2.Text);
+            bool rezultat = KatalogKsiazek.DodajKsiazke(int.Parse(textBox1.Text), "ubytek", textBox2.Text);
+            if (rezultat == false)
+            {
+                MessageBox.Show("Już istnieje książka z tym numerem inwentażowym!");
+            }
             textBox1.Text = "";
             textBox2.Text = "";
         }

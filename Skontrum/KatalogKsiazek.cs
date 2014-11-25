@@ -45,11 +45,20 @@ namespace Skontrum
         }
         public static bool DodajKsiazke(int numerInw, string stan, string miejsce)
         {
-            bool rezultat = false;
+            bool rezultat;
             //doddawanie ksiazki
-            Zmienne.tabela.Rows.Add(numerInw, stan, miejsce);
-            Zmienne.tabela.AcceptChanges();
-            Zmienne.zapisane = false;
+            DataRow[] odfiltrowaneRows = Zmienne.tabela.Select("Convert(nrInw, 'System.String') LIKE '%" + numerInw.ToString() + "%'");
+            if (odfiltrowaneRows.Count() > 0)
+            {
+                rezultat = false;
+            }
+            else
+            {
+                Zmienne.tabela.Rows.Add(numerInw, stan, miejsce);
+                Zmienne.tabela.AcceptChanges();
+                Zmienne.zapisane = false;
+                rezultat = true;
+            }
             return rezultat;
         }
         public static int PoliczKsiazki()
