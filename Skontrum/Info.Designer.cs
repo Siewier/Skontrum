@@ -156,6 +156,7 @@
             this.linkLabel2.TabIndex = 11;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "www.przemeksiewierski.eu";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // Info
             // 

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnUbytki = new System.Windows.Forms.Button();
             this.btnZamknij = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -44,16 +43,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(375, 282);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btnUbytki
-            // 
-            this.btnUbytki.Location = new System.Drawing.Point(13, 301);
-            this.btnUbytki.Name = "btnUbytki";
-            this.btnUbytki.Size = new System.Drawing.Size(154, 23);
-            this.btnUbytki.TabIndex = 1;
-            this.btnUbytki.Text = "Oznacz wszystkie jako braki";
-            this.btnUbytki.UseVisualStyleBackColor = true;
-            this.btnUbytki.Click += new System.EventHandler(this.btnUbytki_Click);
             // 
             // btnZamknij
             // 
@@ -72,7 +61,6 @@
             this.ClientSize = new System.Drawing.Size(400, 336);
             this.ControlBox = false;
             this.Controls.Add(this.btnZamknij);
-            this.Controls.Add(this.btnUbytki);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormBrakujace";
@@ -86,7 +74,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnUbytki;
         private System.Windows.Forms.Button btnZamknij;
     }
 }

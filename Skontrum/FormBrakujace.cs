@@ -28,10 +28,10 @@ namespace Skontrum
             this.Close();
         }
 
-        private void btnUbytki_Click(object sender, EventArgs e)
-        {
-            KatalogKsiazek.OznaczJakoBrakujace();
-            this.Close();
-        }
+        //private void btnUbytki_Click(object sender, EventArgs e)
+        //{
+        //    KatalogKsiazek.OznaczJakoBrakujace();
+        //    this.Close();
+        //}
     }
 }

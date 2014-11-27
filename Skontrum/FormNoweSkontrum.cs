@@ -24,13 +24,22 @@ namespace Skontrum
 
         private void btnZapiszNoweSkontrum_Click(object sender, EventArgs e)
         {
-            Zmienne.plik += this.tbNoweSkontrum.Text.ToString();
-            Zmienne.plik += ".xml";
-            bool rezultat = KatalogKsiazek.NoweSkontrum(Zmienne.plik);
-            if (rezultat == false)
+            bool rezultatParse = int.TryParse(tbMaxNumer.Text,out Zmienne.maxNumInw);
+            if (rezultatParse == false)
             {
                 //wyswietl okienko z bledem
-                MessageBox.Show("Nie udało się utworzyć pliku! Ścieżka: " + Zmienne.plik);
+                MessageBox.Show("Ostatni numer inwentarzowy wprowadzony niepoprawnie!");
+            }
+            else
+            {
+                Zmienne.plik += this.tbNoweSkontrum.Text.ToString();
+                Zmienne.plik += ".xml";
+                bool rezultat = KatalogKsiazek.NoweSkontrum(Zmienne.plik);
+                if (rezultat == false)
+                {
+                    //wyswietl okienko z bledem
+                    MessageBox.Show("Nie udało się utworzyć pliku! Ścieżka: " + Zmienne.plik);
+                }
             }
             this.Close();
         }

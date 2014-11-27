@@ -65,5 +65,19 @@ namespace Skontrum
 
             printer.PrintDataGridView(dataGridView1);
         }
+
+        private void cbBrukujUbytki_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbBrukujUbytki.Checked ==  true)
+            {
+                dataGridView1.DataSource = Zmienne.tabelaBraki;
+                dataGridView1.Refresh();
+            }
+            else
+            {
+                dataGridView1.DataSource = Zmienne.tabela;
+                dataGridView1.Refresh();
+            }
+        }
     }
 }

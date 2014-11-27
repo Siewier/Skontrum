@@ -37,5 +37,10 @@ namespace Skontrum
             link2.LinkData = "http://przemeksiewierski.eu";
             linkLabel2.Links.Add(link2);
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(e.Link.LinkData.ToString());
+        }
     }
 }

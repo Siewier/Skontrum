@@ -21,6 +21,16 @@ namespace Skontrum
             Zmienne.tabela.Columns.Add("miejsce", typeof(string));
             Zmienne.tabela.AcceptChanges();
 
+            int licznik = Zmienne.maxNumInw;
+            do
+            {
+                Zmienne.tabela.Rows.Add(licznik, "brak", "");
+                Zmienne.tabela.AcceptChanges();
+                licznik--;
+            } while (licznik > 0);
+
+            KatalogKsiazek.PosortujKsiazki();
+
             try
             {
                 //File.Create(nazwa);
@@ -36,7 +46,6 @@ namespace Skontrum
             Zmienne.wczytane = true;
             return rezultat;
         }
-
         public static bool PobierzDane()
         {
             bool rezultat = false;
@@ -47,17 +56,17 @@ namespace Skontrum
         {
             bool rezultat;
             //doddawanie ksiazki
-            DataRow[] odfiltrowaneRows = Zmienne.tabela.Select("Convert(nrInw, 'System.String') LIKE '%" + numerInw.ToString() + "%'");
-            if (odfiltrowaneRows.Count() > 0)
+            if (Zmienne.tabela.Rows[numerInw - 1][1].ToString() == "brak")
             {
-                rezultat = false;
-            }
-            else
-            {
-                Zmienne.tabela.Rows.Add(numerInw, stan, miejsce);
+                Zmienne.tabela.Rows[numerInw - 1].SetField(1, stan);
+                Zmienne.tabela.Rows[numerInw - 1].SetField(2, miejsce);
                 Zmienne.tabela.AcceptChanges();
                 Zmienne.zapisane = false;
                 rezultat = true;
+            }
+            else
+            {
+                rezultat = false;
             }
             return rezultat;
         }
@@ -124,19 +133,12 @@ namespace Skontrum
         {
             PosortujKsiazki();
             Zmienne.tabelaBraki.Clear();
-            int poprzedniaKsiazka = int.Parse(Zmienne.tabela.Rows[0][0].ToString());
             foreach (DataRow row in Zmienne.tabela.Rows)
             {
-                int numerInw = int.Parse(row["nrInw"].ToString());
-                if (numerInw > poprzedniaKsiazka)
+                if (row["stan"].ToString() == "brak")
                 {
-                    for (int i = poprzedniaKsiazka + 1; i < numerInw; i++)
-                    {
-                        Zmienne.tabelaBraki.Rows.Add(i, "brak danych", "brak danych");
-                        Zmienne.tabela.AcceptChanges();
-                    }
-                    poprzedniaKsiazka = numerInw;
-
+                    Zmienne.tabelaBraki.Rows.Add(row.ItemArray);
+                    Zmienne.tabelaBraki.AcceptChanges();
                 }
             }
         }

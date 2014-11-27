@@ -40,6 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.cbBrukujUbytki = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,12 +151,24 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "książek.";
             // 
+            // cbBrukujUbytki
+            // 
+            this.cbBrukujUbytki.AutoSize = true;
+            this.cbBrukujUbytki.Location = new System.Drawing.Point(383, 272);
+            this.cbBrukujUbytki.Name = "cbBrukujUbytki";
+            this.cbBrukujUbytki.Size = new System.Drawing.Size(108, 17);
+            this.cbBrukujUbytki.TabIndex = 13;
+            this.cbBrukujUbytki.Text = "Drukuj tylko braki";
+            this.cbBrukujUbytki.UseVisualStyleBackColor = true;
+            this.cbBrukujUbytki.CheckedChanged += new System.EventHandler(this.cbBrukujUbytki_CheckedChanged);
+            // 
             // FormDrukuj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 449);
             this.ControlBox = false;
+            this.Controls.Add(this.cbBrukujUbytki);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -192,5 +205,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox cbBrukujUbytki;
     }
 }

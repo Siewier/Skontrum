@@ -49,8 +49,10 @@ namespace Skontrum
                 label13.Text = "0";
             }
             //label14
-            int iloscBrakujacych =  int.Parse(Zmienne.tabela.Rows[iloscKsiazek - 1][0].ToString()) - iloscKsiazek;
-            label14.Text = iloscBrakujacych.ToString();
+            //int iloscBrakujacych =  int.Parse(Zmienne.tabela.Rows[iloscKsiazek - 1][0].ToString()) - iloscKsiazek;
+            //label14.Text = iloscBrakujacych.ToString();
+            KatalogKsiazek.SzukajBrakujacych();
+            label14.Text = Zmienne.tabelaBraki.Rows.Count.ToString();
 
         }
 
