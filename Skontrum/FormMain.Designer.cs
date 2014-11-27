@@ -208,7 +208,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.Filter = "\"Pliki XML|*.xml|Wszystkie|*.*\"";
-            this.openFileDialog1.InitialDirectory = "Directory.GetCurrentDirectory()";
             // 
             // btnInfo
             // 
@@ -234,7 +233,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormMain";
-            this.Text = "Skontrum 1.0";
+            this.Text = "Skontrum 1.1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.gbStart.ResumeLayout(false);

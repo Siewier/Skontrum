@@ -118,7 +118,8 @@ namespace Skontrum
         {
             XLWorkbook wb = new XLWorkbook();
             wb.Worksheets.Add(Zmienne.tabela, "Skontrum");
-            wb.SaveAs(Directory.GetCurrentDirectory() + "\\Skontrum.xlsx");
+            //wb.SaveAs(Directory.GetCurrentDirectory() + "\\Skontrum.xlsx");
+            wb.SaveAs(Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\Skontrum.xlsx");
         }
         public static void PosortujKsiazki()
         {

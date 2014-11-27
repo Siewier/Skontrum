@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,10 +90,12 @@ namespace Skontrum
         private void btnWczytajSkontrum_Click(object sender, EventArgs e)
         {
             bool efekt = false;
+            //openFileDialog1.InitialDirectory = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents");
+            openFileDialog1.InitialDirectory = Zmienne.plik;
+            openFileDialog1.RestoreDirectory = true;
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK) // Test result.
             {
-                //string file = openFileDialog1.FileName;
                 Zmienne.plik = openFileDialog1.FileName;
                 efekt = KatalogKsiazek.WczytajXML(Zmienne.plik);
             }
@@ -118,7 +121,7 @@ namespace Skontrum
                 }
                 //else if (dialogResult == DialogResult.No)
                 //{
-                //    //do something else
+                //    //cos innego??
                 //}
             }
         }
