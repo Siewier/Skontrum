@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Skontrum
@@ -40,7 +33,7 @@ namespace Skontrum
                 MessageBox.Show("Już istnieje książka z tym numerem inwentażowym!");
             }
             textBox1.Text = "";
-            textBox2.Text = "";
+            //textBox2.Text = "";
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)

@@ -21,7 +21,7 @@ AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
-OutputDir=C:\Users\Przemek\Desktop\Skontrum 1.0\Instalator
+OutputDir=C:\Users\Przemek\Desktop\Skontrum 1.1\Instalator
 OutputBaseFilename=setup
 SetupIconFile=C:\Users\Przemek\Documents\Visual Studio 2013\Projects\Skontrum\Skontrum\verification5.ico
 Compression=lzma
@@ -34,10 +34,10 @@ Name: "polish"; MessagesFile: "compiler:Languages\Polish.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\Przemek\Desktop\Skontrum 1.0\Skontrum.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Przemek\Desktop\Skontrum 1.0\ClosedXML.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Przemek\Desktop\Skontrum 1.0\DGV Printer.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Przemek\Desktop\Skontrum 1.0\DocumentFormat.OpenXml.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Przemek\Desktop\Skontrum 1.1\Skontrum.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Przemek\Desktop\Skontrum 1.1\ClosedXML.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Przemek\Desktop\Skontrum 1.1\DGV Printer.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Przemek\Desktop\Skontrum 1.1\DocumentFormat.OpenXml.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
