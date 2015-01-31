@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skontrum", "Skontrum\Skontrum.csproj", "{DAD288BF-E4DB-435F-9FF1-75623D2650FB}"
 EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "InstalatorSkontrum", "InstalatorSkontrum\InstalatorSkontrum.isproj", "{18C8972D-2C18-4299-8DAA-DE3D65D007E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -49,6 +51,36 @@ Global
 		{DAD288BF-E4DB-435F-9FF1-75623D2650FB}.SingleImage|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{DAD288BF-E4DB-435F-9FF1-75623D2650FB}.SingleImage|Mixed Platforms.Build.0 = Release|Any CPU
 		{DAD288BF-E4DB-435F-9FF1-75623D2650FB}.SingleImage|x86.ActiveCfg = Release|Any CPU
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.CD_ROM|Any CPU.Build.0 = CD_ROM
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.CD_ROM|Mixed Platforms.ActiveCfg = CD_ROM
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.CD_ROM|Mixed Platforms.Build.0 = CD_ROM
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.CD_ROM|x86.ActiveCfg = CD_ROM
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.CD_ROM|x86.Build.0 = CD_ROM
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.Debug|Any CPU.ActiveCfg = DVD-5
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.Debug|Any CPU.Build.0 = DVD-5
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.Debug|Mixed Platforms.ActiveCfg = DVD-5
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.Debug|Mixed Platforms.Build.0 = DVD-5
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.Debug|x86.ActiveCfg = DVD-5
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.Debug|x86.Build.0 = DVD-5
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.DVD-5|Any CPU.ActiveCfg = DVD-5
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.DVD-5|Any CPU.Build.0 = DVD-5
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.DVD-5|Mixed Platforms.ActiveCfg = DVD-5
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.DVD-5|Mixed Platforms.Build.0 = DVD-5
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.DVD-5|x86.ActiveCfg = DVD-5
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.DVD-5|x86.Build.0 = DVD-5
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.Release|Any CPU.ActiveCfg = SingleImage
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.Release|Any CPU.Build.0 = SingleImage
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.Release|Mixed Platforms.ActiveCfg = SingleImage
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.Release|Mixed Platforms.Build.0 = SingleImage
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.Release|x86.ActiveCfg = SingleImage
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.Release|x86.Build.0 = SingleImage
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.SingleImage|Any CPU.ActiveCfg = SingleImage
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.SingleImage|Any CPU.Build.0 = SingleImage
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.SingleImage|Mixed Platforms.ActiveCfg = SingleImage
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.SingleImage|Mixed Platforms.Build.0 = SingleImage
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.SingleImage|x86.ActiveCfg = SingleImage
+		{18C8972D-2C18-4299-8DAA-DE3D65D007E6}.SingleImage|x86.Build.0 = SingleImage
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
