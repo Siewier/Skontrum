@@ -53,9 +53,10 @@
             // 
             // btnNoweSkontrum
             // 
-            this.btnNoweSkontrum.Location = new System.Drawing.Point(6, 19);
+            this.btnNoweSkontrum.Location = new System.Drawing.Point(8, 23);
+            this.btnNoweSkontrum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNoweSkontrum.Name = "btnNoweSkontrum";
-            this.btnNoweSkontrum.Size = new System.Drawing.Size(110, 23);
+            this.btnNoweSkontrum.Size = new System.Drawing.Size(147, 28);
             this.btnNoweSkontrum.TabIndex = 0;
             this.btnNoweSkontrum.Text = "Nowe skontrum";
             this.btnNoweSkontrum.UseVisualStyleBackColor = true;
@@ -63,9 +64,10 @@
             // 
             // btnWczytajSkontrum
             // 
-            this.btnWczytajSkontrum.Location = new System.Drawing.Point(144, 19);
+            this.btnWczytajSkontrum.Location = new System.Drawing.Point(192, 23);
+            this.btnWczytajSkontrum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnWczytajSkontrum.Name = "btnWczytajSkontrum";
-            this.btnWczytajSkontrum.Size = new System.Drawing.Size(110, 23);
+            this.btnWczytajSkontrum.Size = new System.Drawing.Size(147, 28);
             this.btnWczytajSkontrum.TabIndex = 1;
             this.btnWczytajSkontrum.Text = "Wczytaj skontrum";
             this.btnWczytajSkontrum.UseVisualStyleBackColor = true;
@@ -75,9 +77,11 @@
             // 
             this.gbStart.Controls.Add(this.btnNoweSkontrum);
             this.gbStart.Controls.Add(this.btnWczytajSkontrum);
-            this.gbStart.Location = new System.Drawing.Point(12, 12);
+            this.gbStart.Location = new System.Drawing.Point(16, 15);
+            this.gbStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbStart.Name = "gbStart";
-            this.gbStart.Size = new System.Drawing.Size(260, 55);
+            this.gbStart.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbStart.Size = new System.Drawing.Size(347, 68);
             this.gbStart.TabIndex = 2;
             this.gbStart.TabStop = false;
             this.gbStart.Text = "Start";
@@ -87,9 +91,11 @@
             this.gbDodaj.Controls.Add(this.btnUbytki);
             this.gbDodaj.Controls.Add(this.btnWypozyczone);
             this.gbDodaj.Controls.Add(this.btnZPolki);
-            this.gbDodaj.Location = new System.Drawing.Point(12, 74);
+            this.gbDodaj.Location = new System.Drawing.Point(16, 91);
+            this.gbDodaj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbDodaj.Name = "gbDodaj";
-            this.gbDodaj.Size = new System.Drawing.Size(260, 85);
+            this.gbDodaj.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDodaj.Size = new System.Drawing.Size(347, 105);
             this.gbDodaj.TabIndex = 3;
             this.gbDodaj.TabStop = false;
             this.gbDodaj.Text = "Dodawanie";
@@ -97,9 +103,10 @@
             // btnUbytki
             // 
             this.btnUbytki.Enabled = false;
-            this.btnUbytki.Location = new System.Drawing.Point(76, 49);
+            this.btnUbytki.Location = new System.Drawing.Point(101, 60);
+            this.btnUbytki.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUbytki.Name = "btnUbytki";
-            this.btnUbytki.Size = new System.Drawing.Size(109, 23);
+            this.btnUbytki.Size = new System.Drawing.Size(145, 28);
             this.btnUbytki.TabIndex = 2;
             this.btnUbytki.Text = "Ubytki";
             this.btnUbytki.UseVisualStyleBackColor = true;
@@ -108,9 +115,10 @@
             // btnWypozyczone
             // 
             this.btnWypozyczone.Enabled = false;
-            this.btnWypozyczone.Location = new System.Drawing.Point(144, 20);
+            this.btnWypozyczone.Location = new System.Drawing.Point(192, 25);
+            this.btnWypozyczone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnWypozyczone.Name = "btnWypozyczone";
-            this.btnWypozyczone.Size = new System.Drawing.Size(110, 23);
+            this.btnWypozyczone.Size = new System.Drawing.Size(147, 28);
             this.btnWypozyczone.TabIndex = 1;
             this.btnWypozyczone.Text = "Wypożyczone";
             this.btnWypozyczone.UseVisualStyleBackColor = true;
@@ -119,9 +127,10 @@
             // btnZPolki
             // 
             this.btnZPolki.Enabled = false;
-            this.btnZPolki.Location = new System.Drawing.Point(7, 20);
+            this.btnZPolki.Location = new System.Drawing.Point(9, 25);
+            this.btnZPolki.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnZPolki.Name = "btnZPolki";
-            this.btnZPolki.Size = new System.Drawing.Size(109, 23);
+            this.btnZPolki.Size = new System.Drawing.Size(145, 28);
             this.btnZPolki.TabIndex = 0;
             this.btnZPolki.Text = "Z półki";
             this.btnZPolki.UseVisualStyleBackColor = true;
@@ -131,9 +140,11 @@
             // 
             this.gbStatus.Controls.Add(this.btnTabela);
             this.gbStatus.Controls.Add(this.btnPodsumowanie);
-            this.gbStatus.Location = new System.Drawing.Point(12, 166);
+            this.gbStatus.Location = new System.Drawing.Point(16, 204);
+            this.gbStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbStatus.Name = "gbStatus";
-            this.gbStatus.Size = new System.Drawing.Size(260, 55);
+            this.gbStatus.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbStatus.Size = new System.Drawing.Size(347, 68);
             this.gbStatus.TabIndex = 4;
             this.gbStatus.TabStop = false;
             this.gbStatus.Text = "Status";
@@ -141,9 +152,10 @@
             // btnTabela
             // 
             this.btnTabela.Enabled = false;
-            this.btnTabela.Location = new System.Drawing.Point(144, 20);
+            this.btnTabela.Location = new System.Drawing.Point(192, 25);
+            this.btnTabela.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTabela.Name = "btnTabela";
-            this.btnTabela.Size = new System.Drawing.Size(110, 23);
+            this.btnTabela.Size = new System.Drawing.Size(147, 28);
             this.btnTabela.TabIndex = 1;
             this.btnTabela.Text = "Tabela";
             this.btnTabela.UseVisualStyleBackColor = true;
@@ -152,9 +164,10 @@
             // btnPodsumowanie
             // 
             this.btnPodsumowanie.Enabled = false;
-            this.btnPodsumowanie.Location = new System.Drawing.Point(6, 20);
+            this.btnPodsumowanie.Location = new System.Drawing.Point(8, 25);
+            this.btnPodsumowanie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPodsumowanie.Name = "btnPodsumowanie";
-            this.btnPodsumowanie.Size = new System.Drawing.Size(110, 23);
+            this.btnPodsumowanie.Size = new System.Drawing.Size(147, 28);
             this.btnPodsumowanie.TabIndex = 0;
             this.btnPodsumowanie.Text = "Podsumowanie";
             this.btnPodsumowanie.UseVisualStyleBackColor = true;
@@ -165,9 +178,11 @@
             this.groupBox1.Controls.Add(this.btnEksportuj);
             this.groupBox1.Controls.Add(this.btnDrukuj);
             this.groupBox1.Controls.Add(this.btnZapisz);
-            this.groupBox1.Location = new System.Drawing.Point(12, 228);
+            this.groupBox1.Location = new System.Drawing.Point(16, 281);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(260, 80);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(347, 98);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Zapisywanie";
@@ -175,9 +190,10 @@
             // btnEksportuj
             // 
             this.btnEksportuj.Enabled = false;
-            this.btnEksportuj.Location = new System.Drawing.Point(6, 50);
+            this.btnEksportuj.Location = new System.Drawing.Point(8, 62);
+            this.btnEksportuj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEksportuj.Name = "btnEksportuj";
-            this.btnEksportuj.Size = new System.Drawing.Size(248, 23);
+            this.btnEksportuj.Size = new System.Drawing.Size(331, 28);
             this.btnEksportuj.TabIndex = 2;
             this.btnEksportuj.Text = "Eksportuj do MS Excel";
             this.btnEksportuj.UseVisualStyleBackColor = true;
@@ -186,9 +202,10 @@
             // btnDrukuj
             // 
             this.btnDrukuj.Enabled = false;
-            this.btnDrukuj.Location = new System.Drawing.Point(144, 20);
+            this.btnDrukuj.Location = new System.Drawing.Point(192, 25);
+            this.btnDrukuj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDrukuj.Name = "btnDrukuj";
-            this.btnDrukuj.Size = new System.Drawing.Size(110, 23);
+            this.btnDrukuj.Size = new System.Drawing.Size(147, 28);
             this.btnDrukuj.TabIndex = 1;
             this.btnDrukuj.Text = "Drukuj";
             this.btnDrukuj.UseVisualStyleBackColor = true;
@@ -197,9 +214,10 @@
             // btnZapisz
             // 
             this.btnZapisz.Enabled = false;
-            this.btnZapisz.Location = new System.Drawing.Point(6, 20);
+            this.btnZapisz.Location = new System.Drawing.Point(8, 25);
+            this.btnZapisz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnZapisz.Name = "btnZapisz";
-            this.btnZapisz.Size = new System.Drawing.Size(110, 23);
+            this.btnZapisz.Size = new System.Drawing.Size(147, 28);
             this.btnZapisz.TabIndex = 0;
             this.btnZapisz.Text = "Zapisz";
             this.btnZapisz.UseVisualStyleBackColor = true;
@@ -211,9 +229,10 @@
             // 
             // btnInfo
             // 
-            this.btnInfo.Location = new System.Drawing.Point(19, 315);
+            this.btnInfo.Location = new System.Drawing.Point(25, 388);
+            this.btnInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(247, 23);
+            this.btnInfo.Size = new System.Drawing.Size(329, 28);
             this.btnInfo.TabIndex = 6;
             this.btnInfo.Text = "O programie";
             this.btnInfo.UseVisualStyleBackColor = true;
@@ -221,9 +240,9 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 346);
+            this.ClientSize = new System.Drawing.Size(379, 426);
             this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbStatus);
@@ -231,9 +250,10 @@
             this.Controls.Add(this.gbStart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "FormMain";
-            this.Text = "Skontrum 1.1";
+            this.Text = "Skontrum 1.2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.gbStart.ResumeLayout(false);
